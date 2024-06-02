@@ -22,6 +22,7 @@ body{
   color: #fff;
   background: none;
   border: none;
+  text-transform: uppercase;
 }
 @keyframes anima{
   0%{
