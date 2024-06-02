@@ -1,0 +1,84 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+ul{
+  list-style-type: none;
+  
+  display: flex;
+  
+  position: relative;
+  
+}
+ul li{
+  height: 80px;
+  width: 80px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: white;
+  border-radius: 60px;
+  box-shadow: 0 8px 25px #00000055 ;
+  
+  position: relative;
+  transition: .2s;
+}
+
+ul li:hover {
+  width: 180px;
+}
+
+ul li span{
+  position:absolute;
+}
+ul li .text{
+  transform: scale(0);
+  color: white;
+  font-size: 23px;
+  transition: .2s;
+  transition-delay: .1s;
+}
+ul li .icon{
+  color: #ccc;
+  font-size: 23px;
+}
+ul li:hover .text{
+  transform: scale(1);
+}
+ul li:hover .icon{
+  transform: scale(0);
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  border-radius: 60px;
+}
+ul li:hover::before{
+  opacity: 1;
+}
+ul #insta::before{
+  background-image: linear-gradient(45deg,#dd3bf8f0,#f931c8f0,#f9297af0,#f94a29f0);
+}
+ul #whats::before{
+  background-image: linear-gradient(45deg,#7ef643f0,#aef419f0);
+}
+ul #face::before{
+  background-image: linear-gradient(45deg,#3377e0f0,#1fa2f6f0);
+}
+ul #git::before{
+  background-image: linear-gradient(45deg,#111612f0,#2c2c2cf0,#4b4b4bf0,#9a9a9af0,#edededf0);
+}
